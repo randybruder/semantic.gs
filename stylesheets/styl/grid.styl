@@ -43,18 +43,18 @@ body
 row(columns = columns)
 	display block
 	width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)
-	margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)
+	margin inherit total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)
 	*width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)-correction
-	*margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
+	*margin inherit total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
 
 column(x, columns = columns)
 	display inline
 	float left
 	overflow hidden
 	width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)
-	margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)
+	margin inherit total-width * ( (gutter-width * 0.5) / _gridsystem-width)
 	*width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)-correction
-	*margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)-correction
+	*margin inherit total-width * ( (gutter-width * 0.5) / _gridsystem-width)-correction
 
-offset(offset = 1)
+offset(offset = 1, columns = columns)
 	margin-left total-width*(((gutter-width+column-width)*offset + (gutter-width*0.5))/_gridsystem-width)
